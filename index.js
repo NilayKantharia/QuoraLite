@@ -7,12 +7,27 @@ app.use(express.urlencoded({extended: true}))
 
 app.set("view engine", "ejs")
 app.set("views", path.join(__dirname, "views"))
-app.set(express.static("public", path.join(__dirname, "public")))
+app.set(express.static(path.join(__dirname, "public")))
 
 
 const posts = [
-    
+    {
+        username : "Virang",
+        content : "Dukh toh ho raha hai!"
+    },
+    {
+        username : "Abhinav",
+        content : "Khud se expand kar leta hai yeh bosriwala"
+    },
+    {
+        username : "Uday",
+        content : "Barkoooo!"
+    }
 ]
+
+app.get("/posts", (req,res) => {
+    res.render("index.ejs")
+})
 
 
 app.listen(PORT, () => console.log(`Server started at ${PORT}`))
