@@ -17,20 +17,28 @@ let posts = [
     {
         id : uuidv4(),
         username : "Virang",
-        content : "Dukh toh ho raha hai!"
+        content : "DNA is like a computer program but far, far more advanced than any software ever created."
     },
     {
         id : uuidv4(),
         username : "Abhinav",
-        content : "Khud se expand kar leta hai yeh bosriwala"
+        content : "There are only two hard things in computer science: cache invalidation, naming things, and off-by-one errors."
     },
     {
         id : uuidv4(),
         username : "Uday",
-        content : "Barkoooo!"
+        content : "I would tell you a UDP joke, but you might not get it."
+    },
+    {
+        id : uuidv4(),
+        username : "Meet",
+        content : "There are 10 types of people in the world: those who understand binary, and those who don’t."
     }
 ]
 
+app.get("/", (req, res) => {
+    res.redirect("/posts")
+})
 app.get("/posts", (req,res) => {
     res.render("index.ejs", {posts})
 })
