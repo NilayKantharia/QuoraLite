@@ -9,4 +9,4 @@ This project is built to demonstrate the **REST(Representational State Transfer)
 + EJS(for templating engine)
 
 ### Note : 
-I have implemented Database in this project, instead i have used an array to do all the operations.
+I have not implemented Database in this project, instead i have used an array to do all the operations.
